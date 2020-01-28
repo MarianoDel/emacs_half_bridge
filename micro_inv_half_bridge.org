@@ -1,0 +1,21 @@
+* PSU HALF-BRIDGE CON PLACA MICRO INVERTER
+** Arranque Hardware
+*** Uso la base del programa micro_inverter
+
+** Sensado de Vout
+   - Lo hago con el opto de V_Sense KB817
+   - R8 en 2k7
+   - R5 en 47k
+   - OJO se mueve un poco cuando calienta el opto
+
+
+|  Vout | V_Sense |
+|-------+---------+
+|    20 |     136 |
+|    25 |     202 |
+|    30 |     274 |
+|  34.5 |     344 |
+| 48.15 |     580 |
+
+** Cambio el TIM3_CH2 por TIM1_CH1N para poder defasar los pulsos
+   - lo hago en PA7 H_LEFT
