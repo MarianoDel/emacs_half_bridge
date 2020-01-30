@@ -19,3 +19,15 @@
 
 ** Cambio el TIM3_CH2 por TIM1_CH1N para poder defasar los pulsos
    - lo hago en PA7 H_LEFT
+
+** Agrego red snubber en diodos de salida
+   - paralelo a cada diodo
+
+| Condicion      | Lleak F3032 | Pout | fn         | Vpeak | Vplateau |
+|----------------+-------------+------+------------+-------+----------|
+| sin cap        | 57nH        | 35W  | 8.69MHz    | 139V  | 55V      |
+| con C 4700p    | 57nH        | 35W  | 1.5MHz     | 110V  | 55V      |
+| red 560 y 39pF | 57nH        | 35W  | 7.4MHz     | 133V  | 55V      |
+| red 82 y 220pF |             |      | 4.9MHz     | 110V  | 55V      |
+| red 15 y 1nF   |             | 35W  | no se nota | 135V  | 74V      |
+| red 15 y 1nF   |             | 42W  | 2.8MHz     | 144V  | 74V      |
